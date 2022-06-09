@@ -154,7 +154,9 @@ export const isMemberExpressionBrowser = (path: string): boolean => {
   }
   return !currentOpenBracketCount && !currentOpenParensCount
 }
-
+/**
+ * 是否node成员表达式
+ */
 export const isMemberExpressionNode = __BROWSER__
   ? (NOOP as any as (path: string, context: TransformContext) => boolean)
   : (path: string, context: TransformContext): boolean => {

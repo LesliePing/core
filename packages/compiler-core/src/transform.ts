@@ -80,7 +80,9 @@ export interface ImportItem {
   exp: string | ExpressionNode
   path: string
 }
-
+/**
+ * Vue 转换上下文
+ */
 export interface TransformContext
   extends Required<
       Omit<TransformOptions, 'filename' | keyof CompilerCompatOptions>
